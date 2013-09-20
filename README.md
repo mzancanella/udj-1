@@ -50,7 +50,7 @@ then go to [http://localhost:3000/hello](http://localhost:3000/hello) or [http:/
 	- [An example using express](http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/) (which we will be using)
 	- [A lot of resources here](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js)
 
-These are all node resources, which is good to learn about but there are many more components to our web app. Node is used for our server-side computation, but the UI and frontend will be a combination of html and JavaScript and I have narrowed down the front-end framework to either Backbone.js or Bootstrap.js, input on those is welcome. Here are some starting points as far as front-end is concerned:
+These are all node resources, which is good to learn about but there are many more components to our web app. Node is used for our server-side computation, but the UI and frontend will be a combination of html and JavaScript using backbone.js and bootstrap.js. Backbone is a front-end framework for client-side (browser) computation, bootstrap is a UI framework. Here are some starting points as far as those are concerned:
 
 - [Backbone](http://www.google.com/search?q=backbone+js)
 - [Bootstrap](http://www.google.com/search?q=bootstrap+js)
