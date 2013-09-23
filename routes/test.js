@@ -1,5 +1,5 @@
 exports.hello = function(req, res) {
-    res.send('Hey there!');
+    res.send('hello');
 };
 
 exports.goodbye = function(reg, res) {

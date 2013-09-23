@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>UDj
+===
+---
+
+Git
+---
+
+Assuming you have git installed, you can do
+
+    $ git clone https://your_cloudforge</title>
+
+</head>
+<body>
+<h1>UDj</h1>
+
+<hr />
+
+<h2>Git</h2>
+
+<p>Assuming you have git installed, you can do</p>
+
+<pre><code>$ git clone https://your_cloudforge_username@udj.git.cloudforge.com/udj.git
+</code></pre>
+
+<p>replacing 'your_cloudforge_username' with (obviously) your cloudforge username. You'll then be prompted for your password and the repository will sync. If you are using windows github app then it's really straightforward. I recommend using the git command line interface until you are familiar with how git works but you can do whatever you want. Oh and if you haven't checked out <a href="http://www.gitimmersion.com">git immersion</a> you should do that too.</p>
+
+<p>Once you've installed git and cloned the repo, you can sync the latest source from cloudforge by doing</p>
+
+<pre><code>$ git pull origin master
+</code></pre>
+
+<p><strong>Before you commit any changes at all, make sure you are not in the master branch.</strong> The first thing you should do before making any changes or adding anything at all is make a new topic branch. You can do this with</p>
+
+<pre><code>$ git branch branch_name
+$ git checkout branch_name
+</code></pre>
+
+<p>replacing branch_name with whatever you want.</p>
+
+<p>Now you can do whatever you want and commit changes to your own branch without messing with the master branch. <strong>Only finished and/or <em>working</em> components should be committed to master.</strong></p>
+
+<p><strong>Read the damn <a href="http://www.gitimmersion.com">git immersion</a>!</strong></p>
+
+<h2>Project Overview</h2>
+
+<p>So far we have a simple local server set up with a bootstrap template. If you want to run it you need to do a few things. To simply check out the template, open www/index.html in your browser.</p>
+
+<ol>
+<li><p>First of all install node. Either download it from <a href="http://nodejs.org/download/" title="Download node.js">here</a>, or if you are on Linux or Mac (assuming you have Xcode installed) you can do this in terminal:</p>
+
+<pre><code> $ git clone git://github.com/ry/node.git
+ $ cd node
+ $ ./configure
+ $ make
+ $ sudo make install
+</code></pre>
+
+<p> If you opt to install with terminal you might need to install a few dependencies. See <a href="http://howtonode.org/how-to-install-nodejs" title="How to install node">here</a>.</p></li>
+<li><p>You need to install express to run the server. Simply run this from the root of the repository:</p>
+
+<pre><code> $ npm install
+</code></pre></li>
+<li><p>Once you have node installed simply run this from the root of the repository:</p>
+
+<pre><code> $ node server.js
+</code></pre>
+
+<p>then go to <a href="http://localhost:3000">http://localhost:3000</a> to see it in action. So far we have a barebones bootstrap template running.</p></li>
+<li><p>That's it... what did you expect? Do some reading:</p>
+
+<ul>
+<li><a href="http://www.nodebeginner.org/">Best place to start</a></li>
+<li><a href="http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/">An example using express</a> (which we will be using)</li>
+<li><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js">A lot of resources here</a></li>
+</ul>
+</li>
+</ol>
+
+
+<p>These are all node resources, which is good to learn about but there are many more components to our web app. Node is used for our server-side computation, but the UI and frontend will be a combination of html and JavaScript using backbone.js and bootstrap.js. Backbone is a front-end framework for client-side (browser) computation, bootstrap is a UI framework. Here are some starting points as far as those are concerned:</p>
+
+<ul>
+<li><a href="http://www.google.com/search?q=backbone+js">Backbone</a></li>
+<li><a href="http://www.google.com/search?q=bootstrap+js">Bootstrap</a></li>
+</ul>
+
+</body>
+</html>
