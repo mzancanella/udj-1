@@ -1,0 +1,14 @@
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #FFFFFF;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+input.span2 {
+  width: 300px;
+  height: 35px;
+}
