@@ -1,0 +1,14 @@
+body {
+	/*padding-top: 50px;*/
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+@font-face {
+	font-family: "Roboto"
+	src: url("../assets/fonts/Roboto.ttf")
+}
+html * {
+	font-family: "Roboto"
+}
