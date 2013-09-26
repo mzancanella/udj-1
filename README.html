@@ -152,16 +152,7 @@ sup {
 	}
 }
 </style>
-<title>UDj
-===
----
-
-Git
----
-
-Assuming you have git installed, you can do
-
-    $ git clone https://your_cloudforge</title>
+<title>Windows Users</title>
 
 </head>
 <body>
@@ -169,14 +160,80 @@ Assuming you have git installed, you can do
 
 <hr />
 
-<h2>Git</h2>
+<h2>Using Git</h2>
 
-<p>Assuming you have git installed, you can do</p>
+<p>I strongly encourage you to do some research and at the very least, complete a few of the lessons at <a href="http://www.gitimmersion.com">git immersion</a>. You will probably be using the Github app to manage your repository, which works fine, but I urge you to use the command line interface. It will help you understand git better and improve your knowledge on terminal (or <em>command prompt</em>) syntax.</p>
+
+<p>You obviously do not need to know every in and out of git to work on this project, but consider the fact if you plan on getting into any sort of professional programming in the future, you will need to know how git works (or a similar version control system, like subversion). Now is a great time to learn.</p>
+
+<h3>Windows Users</h3>
+
+<p>If you opt to use the command prompt for git (way to go!) I suggest you install <a href="http://cygwin.com/install.html">Cygwin</a>. Cygwin is basically terminal for Windows. You can use it just like you would use a terminal on linux (which, like git, is a great thing to learn how to use) and create aliases for short commands which I get into below.<br/>
+You can obviously just use the command prompt but it sucks and you're on your own.</p>
+
+<h3>Mac Users</h3>
+
+<p>You already have Terminal in Applications/Utilities and you should use that.</p>
+
+<h3>Terminal and Cygwin</h3>
+
+<p>Basic terminal navigation is easy. You start out in the directory <code>~/</code> and it points to <code>/Users/yourusername/</code> on mac and somewhere else on Windows (I'm not sure but it doesn't really matter). Here's just a quick list to help you get started:</p>
+
+<ul>
+<li>You have what is called a pwd, or present working directory. This is where you currently are in the terminal.</li>
+<li>Type <code>ls</code> to list files in your pwd. Try <code>ls -a</code> or <code>ls -la</code> to list hidden files and more information.</li>
+<li>Type <code>cd any/file/path</code> to move your present working directory to any/file/path. For example if I start out in /Users/matthew and do <code>cd Documents</code> I will end up in /Users/matthew/Documents.</li>
+<li>You can use the tab key to autocomplete the names of files in your pwd. For example if I started in ~/ and typed <code>Doc</code> and pressed tab, it would autocomplete to <code>Doc</code>. Press tab twice to view all autocomplete options.</li>
+<li><code>mkdir</code> make a new directory</li>
+<li><code>touch</code> make a new empty file</li>
+<li><code>cp</code> copy a file</li>
+<li><code>mv</code> move or rename a file</li>
+<li><code>rm</code> remove a file.</li>
+</ul>
+
+
+<p>A few recources on terminal usage <a href="http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line">here</a> and <a href="http://www.dummies.com/how-to/content/how-to-use-basic-unix-commands-to-work-in-terminal.html">here</a>.</p>
+
+<h4>.gitconfig</h4>
+
+<p>Git uses a configuration file called <code>.gitconfig</code> located in $HOME. This is typically <code>/Users/username/</code> but you can find out what it points to from a terminal (or command prompt) by typing</p>
+
+<pre><code>echo $HOME
+</code></pre>
+
+<p>You should edit this file and add the following (from git immersion):</p>
+
+<pre><code>[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+</code></pre>
+
+<p>This creates aliases in git that you can use for convenience. For instance, to check status you just type <code>git st</code>. The <code>git hist</code> command is especially useful because it displays the log in a nice readable format.</p>
+
+<h4>.bash_profile</h4>
+
+<p>In your home directory (<code>~/</code>) you have a file called <code>.bash_profile</code> that gets executed every time you open a new shell. In this file you can do all kinds of things but for us it is useful to have a few shortcuts to git commands. I have the following in my <code>.bash_profile</code> (from git immersion):</p>
+
+<pre><code>alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gh='git hist'
+</code></pre>
+
+<p>If you have a terminal window open, close it and open a new one or type <code>. ~/.bash_profile</code>. Now you can just do <code>gs</code> or <code>gb</code> without having to type out git. This is pretty essential if you are going to use the command line interface as it gets extremely annoying typing out <code>git status</code>.</p>
 
 <pre><code>$ git clone https://your_cloudforge_username@udj.git.cloudforge.com/udj.git
 </code></pre>
 
-<p>replacing 'your_cloudforge_username' with (obviously) your cloudforge username. You'll then be prompted for your password and the repository will sync. If you are using windows github app then it's really straightforward. I recommend using the git command line interface until you are familiar with how git works but you can do whatever you want. Oh and if you haven't checked out <a href="http://www.gitimmersion.com">git immersion</a> you should do that too.</p>
+<p>replacing 'your_cloudforge_username' with (obviously) your cloudforge username. You'll then be prompted for your password and the repository will sync. This should be run in a sensible directory, like Documents. When you run this, it will create a folder wherever your present working directory is. For example, if you <code>cd</code> to Documents, Documents/udj will be created with our git repository inside.</p>
 
 <p>Once you've installed git and cloned the repo, you can sync the latest source from cloudforge by doing</p>
 
@@ -192,6 +249,13 @@ $ git checkout branch_name
 <p>replacing branch_name with whatever you want.</p>
 
 <p>Now you can do whatever you want and commit changes to your own branch without messing with the master branch. <strong>Only finished and/or <em>working</em> components should be committed to master.</strong></p>
+
+<p>You can push your branch to the remote repository by doing</p>
+
+<pre><code>$ git push origin branch_name
+</code></pre>
+
+<p><code>origin</code> is the name of our remote repository, the original source of your local repository (hence the name).</p>
 
 <p><strong>Read the damn <a href="http://www.gitimmersion.com">git immersion</a>!</strong></p>
 
@@ -219,7 +283,7 @@ $ git checkout branch_name
 <pre><code> $ node server.js
 </code></pre>
 
-<p>then go to <a href="http://localhost:3000">http://localhost:3000</a> to see it in action. So far we have a barebones bootstrap template running.</p></li>
+<p>then go to <a href="http://localhost:3000">http://localhost:3000</a> to see it in action. So far we have a barebones bootstrap template running. In order to stop the server, you have to type <code>Ctrl-C</code> (this kills processes running in the command line).</p></li>
 <li><p>That's it... what did you expect? Do some reading:</p>
 
 <ul>
