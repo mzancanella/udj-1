@@ -183,7 +183,7 @@ You can obviously just use the command prompt but it sucks and you're on your ow
 <li>You have what is called a pwd, or present working directory. This is where you currently are in the terminal.</li>
 <li>Type <code>ls</code> to list files in your pwd. Try <code>ls -a</code> or <code>ls -la</code> to list hidden files and more information.</li>
 <li>Type <code>cd any/file/path</code> to move your present working directory to any/file/path. For example if I start out in /Users/matthew and do <code>cd Documents</code> I will end up in /Users/matthew/Documents.</li>
-<li>You can use the tab key to autocomplete the names of files in your pwd. For example if I started in ~/ and typed <code>Doc</code> and pressed tab, it would autocomplete to <code>Doc</code>. Press tab twice to view all autocomplete options.</li>
+<li>You can use the tab key to autocomplete the names of files in your pwd. For example if I started in ~/ and typed <code>Doc</code> and pressed tab, it would autocomplete to <code>Documents</code>. Press tab twice to view all autocomplete options.</li>
 <li><code>mkdir</code> make a new directory</li>
 <li><code>touch</code> make a new empty file</li>
 <li><code>cp</code> copy a file</li>
@@ -201,7 +201,7 @@ You can obviously just use the command prompt but it sucks and you're on your ow
 <pre><code>echo $HOME
 </code></pre>
 
-<p>You should edit this file and add the following (from git immersion):</p>
+<p>You should edit <code>.gitconfig</code> and add the following (from git immersion):</p>
 
 <pre><code>[alias]
   co = checkout
@@ -229,6 +229,8 @@ alias gh='git hist'
 </code></pre>
 
 <p>If you have a terminal window open, close it and open a new one or type <code>. ~/.bash_profile</code>. Now you can just do <code>gs</code> or <code>gb</code> without having to type out git. This is pretty essential if you are going to use the command line interface as it gets extremely annoying typing out <code>git status</code>.</p>
+
+<h4>Cloning the repository</h4>
 
 <pre><code>$ git clone https://your_cloudforge_username@udj.git.cloudforge.com/udj.git
 </code></pre>
