@@ -63,6 +63,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
+                <li><a href="#sessionModal" data-toggle="modal">Create Session</a></li>
                 <li><a href="#aboutModal" data-toggle="modal">About</a></li>
                 <li><a href="#contactModal" data-toggle="modal">Contact</a></li>
  
@@ -113,6 +114,19 @@
 	  <div class="modal-footer">
 		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 	  </div>
+	</div>
+	
+	<!--SessionModal-->
+	<div id="sessionModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-body">
+		  <form class="form-signin">
+			<h2 class="form-signin-heading">Create Session</h2>
+			<input type="text" class="input-block-level" placeholder="Email address">
+			<input type="password" class="input-block-level" placeholder="Session Password">
+			<input type="password" class="input-block-level" placeholder="Verify Session Password">
+			<button class="btn btn-large btn-primary" type="submit">Create Session</button>
+		  </form>
+		</div>
 	</div>
 	
 	<!--ContactModal-->
