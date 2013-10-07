@@ -1,0 +1,73 @@
+.navbar .brand {
+  display: block;
+  float: left;
+  padding: 10px 20px 10px;
+  margin-left: -20px;
+  font-size: 30px;
+  font-weight: 200;
+  color:#006dcc;;
+  /*text-shadow: 5px 0 5px #FFFFFF;*/
+}
+
+.navbar .image{
+display: block;
+padding: 0px 0px 0px;
+margin-left: -20px;
+height: 50px; 
+width: 50px;
+
+}
+
+.hero-unit {
+  padding: 150px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+  color: white;
+  /*background-color: #eeeeee;*/
+  background: url(img/background.jpg);
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.hero-unit h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #0058a6;
+  /*background-image: -ms-linear-gradient(bottom right, #0058A6 0%, #00A3EF 100%);*/
+  text-shadow: 5px 0 5px blue;
+}
+
+input.span2 {
+	padding: 15px 80px;
+	
+}
+
+.container{
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+
+.navbar {
+  *position: relative;
+  *z-index: 2;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  overflow: visible;
+}
+
+
+
+.hero-unit p {
+  margin-bottom: 10;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: white;
+}
+
+
