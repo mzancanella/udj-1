@@ -31,15 +31,32 @@
 
 <script src="lib/jquery.js"></script>
 <script src="lib/bootstrap.js"></script>
+<script src="lib/underscore-min.js"></script>
 <script src="lib/backbone-min.js"></script>
-
-<script>
-
-	var Header = Backbone.View.extend({
-
-	}
 
 <script src="js/utils.js"></script>
 <script src="js/views/header.js"></script>
-
 <script src="js/main.js"></script>
+
+<!--
+<script>
+
+	var Header = Backbone.View.extend({
+		
+	});
+
+	var Router = Backbone.Router.extend({
+		routes: {
+			'': 'home'
+		}
+	});
+
+	var router = new Router();
+	router.on('route:home', function () {
+		console.log("We have loaded the home page");
+	});
+
+	Backbone.history.start();
+</script>
+-->
+</html>
