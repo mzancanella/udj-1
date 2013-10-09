@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDj</title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="./assets/ico/favicon.png">
+	
+	<style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link href="css/starter-template.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Starter Template for Bootstrap</title>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+<body>
 
-    <!-- Custom styles for this template -->
-    <link href="./css/starter-template.css" rel="stylesheet">
+<div class="header"></div>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-  <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><style type="text/css"></style></head>
-
-  <body style="" class=" hasGoogleVoiceExt">
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">UDj</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+<div class="container">
+    <div class="starter-template">
+        <h1>UDJ</h1>
+        <p>This is a starter template.<br> Just a nav bar and some text.</p>
     </div>
+</div> <!-- /.container -->
 
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
-
-    </div><!-- /.container -->
+<button class="btn">A button</button>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./lib/jquery.js"></script>
-    <script src="./lib/bootstrap.js"></script>
-  
+<script src="lib/jquery.js"></script>
+<script src="lib/bootstrap.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="lib/backbone-min.js"></script>
 
-</body></html>
+<script src="js/utils.js"></script>
+<script src="js/views/header.js"></script>
+<script src="js/main.js"></script>
+
+<!--
+<script>
+
+	var Header = Backbone.View.extend({
+		
+	});
+
+	var Router = Backbone.Router.extend({
+		routes: {
+			'': 'home'
+		}
+	});
+
+	var router = new Router();
+	router.on('route:home', function () {
+		console.log("We have loaded the home page");
+	});
+
+	Backbone.history.start();
+</script>
+-->
+</html>
