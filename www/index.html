@@ -1,62 +1,102 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
     <meta charset="utf-8">
+    <title>UDj Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="./assets/ico/favicon.png">
 
-    <title>Starter Template for Bootstrap</title>
+    <!-- Styles -->
+	<!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style
+	
+	<!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+	
 
-    <!-- Bootstrap core CSS -->
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+  </head>
 
-    <!-- Custom styles for this template -->
-    <link href="./assets/css/starter-template.css" rel="stylesheet">
+  <body style="background:black">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-  <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><style type="text/css"></style></head>
-
-  <body style="" class=" hasGoogleVoiceExt">
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
+  
+  
+  
+  <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">UDj</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
 
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+		  
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+			<!--<img class="image" src="img/logo.jpg" alt="Logo" align="left"> -->
+			<a class="brand" href="#">UDj</a>
+
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+
+				<!--
+                <li><a href="#sessionModal" data-toggle="modal">Create Session</a></li>
+                <li><a href="#aboutModal" data-toggle="modal">About</a></li>
+                <li><a href="#contactModal" data-toggle="modal">Contact</a></li>
+				-->
+			  </ul>
+			 
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+  
+	
+	<!-- Container
+    ================================================== -->
     <div class="container">
 
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" >
+        <h1>UDj</h1>
+        <p>Its Your Party...Your Music...</p>
+
+		<form name="input" action="session" method="get">
+		  <input class="span2" type="text" name="name" placeholder="SESSION NAME">
+		  <input type="submit" value="Create Session" class="btn btn-primary btn-large">
+	    </form>
       </div>
 
-    </div><!-- /.container -->
+      <hr style="border-color:#006dcc;">
 
+      <footer style="color: white">
+        <p>&copy; UDj 2013</p>
+      </footer>
 
-    <!-- Bootstrap core JavaScript
+    </div> <!-- /container -->
+
+    
+	
+	
+	<!--JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap.js"></script>
-  
-
-</body></html>
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	
+  </body>
+</html>
