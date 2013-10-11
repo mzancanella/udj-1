@@ -38,9 +38,9 @@ width: 50px;
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #0058a6;
+  /*color: #0058a6;*/
   /*background-image: -ms-linear-gradient(bottom right, #0058A6 0%, #00A3EF 100%);*/
-  text-shadow: 5px 0 5px blue;
+  text-shadow: 4px 0 4px blue;
 }
 
 input.span2 {
